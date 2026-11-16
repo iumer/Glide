@@ -12,8 +12,17 @@ Inspired by [Mac Mouse Fix](https://github.com/noah-nuebling/mac-mouse-fix). Gli
 - **Buttons 3–12**: Click / Double Click / Hold → Back, Forward, Mission Control, App Windows, Show Desktop, Move Left/Right a Space, Middle Click, Look Up, or any keyboard shortcut. "Add Action" captures a button when you press it. Middle-drag still works.
 - Launch at login, menu-bar toggles, warning when another mouse utility is running.
 
-## Install
-Build it yourself (needs Xcode command-line tools), then grant Glide access in System Settings › Privacy & Security › Accessibility.
+## Download & install
+1. Download **Glide-1.0.0.dmg** from the [latest release](https://github.com/iumer/Glide/releases/latest) (universal: Apple Silicon + Intel, macOS 14+).
+2. Open the DMG and drag **Glide** into **Applications**.
+3. Glide isn't notarized by Apple (no paid developer account), so macOS will block the first launch. Open it once, then go to **System Settings › Privacy & Security** and click **Open Anyway**. Or, in Terminal:
+   ```bash
+   xattr -dr com.apple.quarantine /Applications/Glide.app
+   ```
+4. When asked, turn on **Glide** in **System Settings › Privacy & Security › Accessibility**. It needs this to read your mouse's scroll wheel and buttons. Glide starts working as soon as access is granted.
+
+Glide lives in the menu bar (mouse icon). Click it for Settings, or to pause it.
+
 
 ## Build
 ```bash
